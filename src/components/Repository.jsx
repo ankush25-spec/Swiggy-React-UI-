@@ -103,7 +103,7 @@ const Repository = ({ children }) => {
         rating: 4.1,
         time: "35-45 min",
         name: "North Indian",
-        place: "Chromepet, Chennai"
+        place: "Chromepet, Chennai",
       },
       {
         id: 9,
@@ -145,7 +145,8 @@ const Repository = ({ children }) => {
         rating: 4.1,
         time: "20-30 min",
         name: "Healthy Food, Sandwich",
-        place: "OMR, Chennai"
+        place: "OMR, Chennai",
+        veg: true
       },
       {
         id: 3,
@@ -155,27 +156,29 @@ const Repository = ({ children }) => {
         rating: 4.4,
         time: "35-45 min",
         name: "South Indian, Parotta",
-        place: "Vadapalani, Chennai"
+        place: "Vadapalani, Chennai",
+        veg: true
       },
       {
         id: 4,
         image: "https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2020-02/Chilli-Garlic-Noodles-Veg.jpg",
         offer: "₹100 OFF",
         title: "Wok Express",
-        rating: 4.0,
+        rating: 3.9,
         time: "25-35 min",
         name: "Chinese, Asian",
-        place: "Ashok Nagar, Chennai"
+        place: "Ashok Nagar, Chennai",
       },
       {
         id: 5,
         image: "https://shoppalace.in/wp-content/uploads/2020/07/penne-pasta-resize-1.jpg",
-        offer: "20% OFF up to ₹80",
+        offer: "",
         title: "La Pasta",
         rating: 4.2,
         time: "30-40 min",
         name: "Italian, Pasta",
-        place: "Alwarpet, Chennai"
+        place: "Alwarpet, Chennai",
+        veg: true
       },
       {
         id: 6,
@@ -185,12 +188,13 @@ const Repository = ({ children }) => {
         rating: 4.3,
         time: "25-35 min",
         name: "Pure Veg",
-        place: "Mylapore, Chennai"
+        place: "Mylapore, Chennai",
+        veg: true
       },
       {
         id: 7,
         image: "https://urbantreatsusa.com/cdn/shop/files/Screenshot2025-06-06at12.55.30AM.png?v=1749189346",
-        offer: "Free Delivery",
+        offer: "",
         title: "Tandoori Treat",
         rating: 4.1,
         time: "35-45 min",
@@ -205,7 +209,8 @@ const Repository = ({ children }) => {
         rating: 4.5,
         time: "15-25 min",
         name: "Juices, Beverages",
-        place: "ECR, Chennai"
+        place: "ECR, Chennai",
+        veg: true
       },
       {
         id: 9,
@@ -215,7 +220,8 @@ const Repository = ({ children }) => {
         rating: 4.0,
         time: "20-25 min",
         name: "South Indian",
-        place: "Kodambakkam, Chennai"
+        place: "Kodambakkam, Chennai",
+        veg: true
       },
       {
         id: 10,
@@ -232,10 +238,11 @@ const Repository = ({ children }) => {
         image: "https://esquirescoffee.co.uk/wp-content/uploads/2021/09/mike-kenneally-tNALoIZhqVM-unsplash.jpg",
         offer: "20% OFF",
         title: "Cafe Coffee Day",
-        rating: 4.1,
+        rating: 3.7,
         time: "20-30 min",
         name: "Cafe, Beverages",
-        place: "Guindy, Chennai"
+        place: "Guindy, Chennai",
+        veg: true
       },
       {
         id: 12,
@@ -260,7 +267,7 @@ const Repository = ({ children }) => {
       {
         id: 14,
         image: "https://static.vecteezy.com/system/resources/thumbnails/035/493/036/small/ai-generated-meat-grilled-bbq-food-photo.jpg",
-        offer: "Free Dessert",
+        offer: "",
         title: "Grill House",
         rating: 4.2,
         time: "35-45 min",
@@ -282,17 +289,18 @@ const Repository = ({ children }) => {
         image: "https://i.ytimg.com/vi/-yqgxNuz9Fo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLByrMzi7iIAF65zE2D2fyuuzgSWMA",
         offer: "Unlimited Thali ₹199",
         title: "Rajdhani Thali",
-        rating: 4.3,
+        rating: 3.5,
         time: "30-40 min",
         name: "Gujarati, Rajasthani",
-        place: "Express Avenue, Chennai"
+        place: "Express Avenue, Chennai",
+        veg: true
       },
       {
         id: 17,
         image: "https://www.momodelights.com/wp-content/uploads/2024/09/Is-Momo-from-Nepal-or-India-1-1024x577.png",
         offer: "Buy 1 Get 1",
         title: "Momo Nation",
-        rating: 4.1,
+        rating: 3.8,
         time: "25-35 min",
         name: "Momos, Tibetan",
         place: "Sholinganallur, Chennai"
@@ -300,7 +308,7 @@ const Repository = ({ children }) => {
       {
         id: 18,
         image: "https://www.suziethefoodie.com/wp-content/uploads/2025/09/Calories-in-a-Donut.png",
-        offer: "Flat ₹70 OFF",
+        offer: "",
         title: "Donut World",
         rating: 4.2,
         time: "20-30 min",
@@ -322,10 +330,111 @@ const Repository = ({ children }) => {
         image: "https://d2lswn7b0fl4u2.cloudfront.net/photos/pg-vegan-chocolate-milkshake-in-jar-1641676525.jpg",
         offer: "Buy 2 Get 1",
         title: "Shake Factory",
-        rating: 4.3,
+        rating: 3.9,
         time: "20-30 min",
         name: "Milkshakes",
+        place: "Perungudi, Chennai",
+        veg: true
+      },
+      {
+        id: 21,
+        image: "https://dt4l9bx31tioh.cloudfront.net/eazymedia/eazytrendz/5109/trend20251210114034.jpg",
+        offer: "",
+        title: "Saravana Bhavan",
+        rating: 4.4,
+        time: "20-30 min",
+        name: "South Indian",
+        place: "Mylapore, Chennai"
+      },
+      {
+        id: 22,
+        image: "https://c.ndtvimg.com/2020-04/6vslovro_kebab_625x300_15_April_20.jpg",
+        offer: "Flat ₹140 OFF",
+        title: "Kebab King",
+        rating: 4.2,
+        time: "30-40 min",
+        name: "Kebabs, Mughlai",
+        place: "Royapettah, Chennai"
+      },
+      {
+        id: 23,
+        image: "https://img.thecdn.in/48979/1625677774225_SKU-0015_0.jpg?width=600&format=webp",
+        offer: "Buy 1 Get 1 Free",
+        title: "Cheese Burst Pizza",
+        rating: 4.1,
+        time: "25-35 min",
+        name: "Pizza",
+        place: "Velachery, Chennai"
+      },
+      {
+        id: 24,
+        image: "https://www.cookwithmanali.com/wp-content/uploads/2014/11/Hakka-Noodles-1-500x375.jpg",
+        offer: "₹100 OFF",
+        title: "Noodle House",
+        rating: 4.0,
+        time: "30-40 min",
+        name: "Chinese, Noodles",
+        place: "Taramani, Chennai"
+      },
+      {
+        id: 25,
+        image: "https://canadabeef.ca/wp-content/uploads/2022/03/RS11875_Air-Fryer-Quarter-pound-Beef-Burgers-Fries-scr.jpg",
+        offer: "Flat ₹90 OFF",
+        title: "Big Bite Burgers",
+        rating: 3.9,
+        time: "20-30 min",
+        name: "Burgers, Fast Food",
         place: "Perungudi, Chennai"
+      },
+      {
+        id: 26,
+        image: "https://manjulaskitchen.com/wp-content/uploads/falooda_kulfi.jpg",
+        offer: "",
+        title: "Falooda Factory",
+        rating: 4.5,
+        time: "15-25 min",
+        name: "Desserts, Beverages",
+        place: "Triplicane, Chennai"
+      },
+      {
+        id: 27,
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtp2whufCe-fZKTiBhZix7nOVPOXiThnOdyw&s",
+        offer: "Free Delivery",
+        title: "Grill Nation",
+        rating: 4.2,
+        time: "35-45 min",
+        name: "Grill, BBQ",
+        place: "Tambaram West, Chennai"
+      },
+      {
+        id: 28,
+        image: "https://content3.jdmagicbox.com/comp/def_content/veg-mess/1-veg-mess-3-3812b.jpg",
+        offer: "Unlimited Meals ₹149",
+        title: "Amma Mess",
+        rating: 3.8,
+        time: "25-35 min",
+        name: "South Indian Meals",
+        place: "Chromepet, Chennai"
+      },
+      {
+        id: 29,
+        image: "https://assets-eu-01.kc-usercontent.com/7d86daa4-c668-01be-7af8-44c5dd436d14/05c6b89f-37f6-4f6e-9f5b-837862657b01/Chocolate%20Cupcakes%204.2%20landscape-2144.jpg?w=3840&q=85&auto=format&lossless=1",
+        offer: "Flat ₹60 OFF",
+        title: "Cupcake Bliss",
+        rating: 4.4,
+        time: "20-30 min",
+        name: "Bakery, Desserts",
+        place: "Nungambakkam, Chennai"
+      },
+      {
+        id: 20,
+        image: "https://blog.swiggy.com/wp-content/uploads/2024/10/Image1_Pani-Puri-1024x538.jpg",
+        offer: "₹50 OFF",
+        title: "Street Food Hub",
+        rating: 4.1,
+        time: "20-30 min",
+        name: "Street Food",
+        place: "Egmore, Chennai"
       }
     ]
 
