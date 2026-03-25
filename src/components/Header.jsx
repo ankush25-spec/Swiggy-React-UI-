@@ -1,0 +1,102 @@
+import React, { useState } from 'react'
+import { IoIosArrowDown } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
+import { RiDiscountPercentLine } from "react-icons/ri";
+import { IoHelpBuoyOutline } from "react-icons/io5";
+import { IoPersonOutline } from "react-icons/io5";
+import { FaOpencart } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
+
+
+
+const Header = () => {
+       const list = [
+        {
+            name:'Search',
+            logo:<IoSearch />
+        },
+        {
+            name:'Offers',
+            logo:<RiDiscountPercentLine />,
+            sup:'new'
+        },
+        {
+            name:'Help',
+            logo:<IoHelpBuoyOutline />
+        },
+        {
+            name:'Sign In',
+            logo:<IoPersonOutline />
+        },
+        {
+            name:'Cart',
+            logo:<FaOpencart />
+        }
+       ]
+
+
+
+    const [toggle, settoggle] = useState(false)
+
+    function showsideMenu() {
+        settoggle(true)
+    }
+
+    function hidesideMenu(){
+        settoggle(false)
+    }
+
+
+    return (
+        <>
+            <div className='black-overlay w-full h-full fixed duration-500 z-40'
+                onClick={hidesideMenu}
+                style={{
+                    opacity: toggle ? 1 : 0,
+                    visibility: toggle ? 'visible' : 'hidden'
+                }}>
+                <div className='w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white h-full absolute duration-500'
+                onClick={(e)=>{
+                    e.stopPropagation()
+                }}
+                    style={{
+                        left: toggle ? '0%' : '-100%'
+                    }}
+                ></div>
+            </div>
+            <header className='px-3 md:px-6 py-3 shadow-xl text-[#686b78] sticky top-0 bg-white z-10'>
+                <div className='max-w-300 mx-auto flex items-center'>
+                    <div className='w-20 md:w-25'>
+                        <img className='w-full' src="https://1000logos.net/wp-content/uploads/2021/05/Swiggy-emblem.png" alt="" />
+                    </div>
+                    <div className='ml-3 text-sm md:text-base truncate max-w-37.5 md:max-w-none'>
+                        <span
+                            className='font-bold border-b-[3px] border-black text-black hover:text-[#fc8019] hover:border-[#fc8019]'>Ratanada
+                        </span>
+                        <span className='hidden sm:inline'>
+                        &nbsp;
+                        Jodhpur, Rajasthtan, India &nbsp;
+                        </span>
+                        <IoIosArrowDown
+                            onClick={() => {
+                                showsideMenu()
+                            }} fontSize={25} className='font-bold inline text-[0.9rem] text-[#fc8019] cursor-pointer'
+                        />
+                    </div>
+                    <div className='ml-auto lg:hidden'>
+                        <RxHamburgerMenu className='text-2xl cursor-pointer' />
+                    </div>
+                        
+                    <nav className='hidden lg:flex list-none gap-10 ml-auto font-semibold text-[16px] xl:text-[18px]'>
+
+                       {list.map((elem,idx)=>{
+                        return <li key={idx} className='flex items-center gap-2 hover:text-[#fc8019]'>{elem.logo} {elem.name} <sup>{elem.sup}</sup></li>
+                       })}
+                    </nav>
+                </div>
+            </header>
+        </>
+    )
+}
+
+export default Header
