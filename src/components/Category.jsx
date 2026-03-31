@@ -49,13 +49,13 @@ const Category = () => {
                 {repoData.categorySlider.map((elem, idx) => {
                     return (
                         <div
-                            key={idx} className='w-37.5 shrink-0 snap-start'>
-                            <img src={elem.link} alt="img" />
+                            key={idx} className='w-25 sm:w-30 lg:w-37.5 shrink-0 snap-start'>
+                            <img className='' src={elem.link} alt="img" />
                         </div>
                     )
                 })}
             </div>
-            <hr className='my-15 border border-[#e2e2e7]' />
+            <hr className='my-5 md:my-10 lg:my-15 border border-[#e2e2e7]' />
         </div>
     )
 }

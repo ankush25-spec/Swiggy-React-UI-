@@ -10,29 +10,29 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 
 const Header = () => {
-       const list = [
+    const list = [
         {
-            name:'Search',
-            logo:<IoSearch />
+            name: 'Search',
+            logo: <IoSearch />
         },
         {
-            name:'Offers',
-            logo:<RiDiscountPercentLine />,
-            sup:'new'
+            name: 'Offers',
+            logo: <RiDiscountPercentLine />,
+            sup: 'new'
         },
         {
-            name:'Help',
-            logo:<IoHelpBuoyOutline />
+            name: 'Help',
+            logo: <IoHelpBuoyOutline />
         },
         {
-            name:'Sign In',
-            logo:<IoPersonOutline />
+            name: 'Sign In',
+            logo: <IoPersonOutline />
         },
         {
-            name:'Cart',
-            logo:<FaOpencart />
+            name: 'Cart',
+            logo: <FaOpencart />
         }
-       ]
+    ]
 
 
 
@@ -42,27 +42,29 @@ const Header = () => {
         settoggle(true)
     }
 
-    function hidesideMenu(){
+    function hidesideMenu() {
         settoggle(false)
     }
 
 
     return (
         <>
-            <div className='black-overlay w-full h-full fixed duration-500 z-40'
+            <div className='black-overlay w-full h-full fixed duration-500 z-70'
                 onClick={hidesideMenu}
                 style={{
                     opacity: toggle ? 1 : 0,
                     visibility: toggle ? 'visible' : 'hidden'
                 }}>
-                <div className='w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white h-full absolute duration-500'
-                onClick={(e)=>{
-                    e.stopPropagation()
-                }}
+                <div className='w-[80%] sm:w-[60%] md:w-[40%] lg:w-[30%] bg-white h-full absolute duration-500 px-8 py-5 text-2xl font-bold'
+                    onClick={(e) => {
+                        e.stopPropagation()
+                    }}
                     style={{
                         left: toggle ? '0%' : '-100%'
                     }}
-                ></div>
+                >
+                     Hey, your location
+                </div>
             </div>
             <header className='px-3 md:px-6 py-3 shadow-xl text-[#686b78] sticky top-0 bg-white z-10'>
                 <div className='max-w-300 mx-auto flex items-center'>
@@ -74,8 +76,8 @@ const Header = () => {
                             className='font-bold border-b-[3px] border-black text-black hover:text-[#fc8019] hover:border-[#fc8019]'>Ratanada
                         </span>
                         <span className='hidden sm:inline'>
-                        &nbsp;
-                        Jodhpur, Rajasthtan, India &nbsp;
+                            &nbsp;
+                            Jodhpur, Rajasthtan, India &nbsp;
                         </span>
                         <IoIosArrowDown
                             onClick={() => {
@@ -86,12 +88,12 @@ const Header = () => {
                     <div className='ml-auto lg:hidden'>
                         <RxHamburgerMenu className='text-2xl cursor-pointer' />
                     </div>
-                        
+
                     <nav className='hidden lg:flex list-none gap-10 ml-auto font-semibold text-[16px] xl:text-[18px]'>
 
-                       {list.map((elem,idx)=>{
-                        return <li key={idx} className='flex items-center gap-2 hover:text-[#fc8019]'>{elem.logo} {elem.name} <sup>{elem.sup}</sup></li>
-                       })}
+                        {list.map((elem, idx) => {
+                            return <li key={idx} className='cursor-pointer flex items-center gap-2 hover:text-[#fc8019]'>{elem.logo} {elem.name} <sup>{elem.sup}</sup></li>
+                        })}
                     </nav>
                 </div>
             </header>
