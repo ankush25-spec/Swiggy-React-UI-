@@ -9,7 +9,6 @@ import { BiSolidOffer } from "react-icons/bi";
 
 const Delivery = () => {
     const [activeFilter, setactiveFilter] = useState(null)
-    console.log(activeFilter)
     let section = [
         {
             name: 'Filter',

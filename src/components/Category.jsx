@@ -3,7 +3,7 @@ import { IoIosArrowBack, IoIosArrowForward, } from "react-icons/io";
 import { repoContext } from './Repository';
 
 
-const Category = () => {
+const Category = ({lineState}) => {
     const sliderRef = useRef(null);
     const { repoData } = useContext(repoContext)
 
@@ -23,7 +23,7 @@ const Category = () => {
         });
     }
 
-    
+
     return (
         <div className='max-w-300 mx-auto px-4'>
             <div className='flex items-center justify-between mt-8'>
@@ -55,7 +55,7 @@ const Category = () => {
                     )
                 })}
             </div>
-            <hr className='my-5 md:my-10 lg:my-15 border border-[#e2e2e7]' />
+            {lineState && <hr className='my-5 md:my-10 lg:my-15 border border-[#e2e2e7]' />}
         </div>
     )
 }
